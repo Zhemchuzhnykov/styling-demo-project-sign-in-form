@@ -14,8 +14,8 @@ In this project, I apply different approaches to styling React applications. I d
 ## Concepts Learned During This Project
 
 - Styling a React app with vanilla CSS
+- Using the approach of grouping CSS files next to JSX files of their components
 - Understanding the scope problem with styling React apps with vanilla CSS
-- The approach of grouping CSS files next to JSX files rendering components with the corresponding styles
 - Setting up styles dynamically with classes
 - Styling a React app with inline styles
 - Setting up styles dynamically with inline styles
