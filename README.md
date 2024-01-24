@@ -8,7 +8,8 @@ In this project, I apply different approaches to styling React applications. I d
 
 ## Branches
 
-- vanilla-css: represents the approach of styling a React application with Vanilla CSS - all the styles are in the files index.css that covers the whole application
+1. vanilla-css: represents the approach of styling a React application with Vanilla CSS while all the styles are in one file, for example, index.css, that covers the whole application.
+2. vanilla-css-modules: represents the approach of styling a React application with Vanilla CSS while the styles are separated and held in different modules next to the components where these styles are applied, for example, the CSS module Header.css is allocated in one folder with the JSX module Header.jsx.
 
 ## Concepts Learned During This Project
 
