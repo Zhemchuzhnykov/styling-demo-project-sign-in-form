@@ -10,7 +10,7 @@ In this project, I apply different approaches to styling React applications. I d
 
 1. vanilla-css: represents the approach of styling a React application with Vanilla CSS while all the styles are in one file, for example, index.css, that covers the whole application.
 2. vanilla-css-modules: represents the approach of styling a React application with Vanilla CSS while the styles are separated and held in different modules next to the components where these styles are applied, for example, the CSS module Header.css is allocated in one folder with the JSX module Header.jsx.
-3. inline-styles: represents the approach of styling a React application with CSS rules defined in a JSX component in the attribute "style".
+3. inline-styles: represents the approach of styling a React application with CSS rules defined inside a JSX component in the attribute "style", including setting styles dynamically.
 
 ## Concepts Learned During This Project
 
