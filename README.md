@@ -13,7 +13,7 @@ In this project, I apply different approaches to styling React applications. I d
 3. inline-styles: represents the approach of styling a React application with CSS rules defined inside a JSX component in the attribute "style", including setting styles dynamically.
 4. dynamic-styling-with-classes: represents the approach that repeats the approach presented in the branch "vanilla-css" but with additional logic of setting styles dynamically through dynamic usage of classes for the label element. The idea of this branch is to emphasize the usage of classes for setting styles dynamically.
 5. css-modules: represents the approach of styling a React application with CSS modules.
-6. styled-components: represents the approach of styling a React application with the help of the package Styled Components.
+6. styled-components: represents the approach of styling a React application with the help of the package Styled Components, including setting up styles dynamically through the props.
 
 ## Concepts Learned During This Project
 
