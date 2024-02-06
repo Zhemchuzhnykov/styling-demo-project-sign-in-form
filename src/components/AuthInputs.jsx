@@ -1,12 +1,94 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { styled } from "styled-components";
+
+const InputsContainer = styled.div`
+  width: 100%;
+  max-width: 28rem;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  background: linear-gradient(180deg, #474232 0%, #28271c 100%);
+  color: white;
+
+  & .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+`;
+
+const Label = styled.label`
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: ${({ $invalid }) => ($invalid ? "#f87171" : "#6b7280")};
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 0.75rem 1rem;
+  line-height: 1.5;
+  background-color: ${({ $invalid }) => ($invalid ? "#fed2d2" : "#d1d5db")};
+  color: ${({ $invalid }) => ($invalid ? "#ef4444" : "#374151")};
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${({ $invalid }) => ($invalid ? "#f73f3f" : "transparent")};
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+`;
+
+const NewAccountBtn = styled.button`
+  cursor: pointer;
+  background: none;
+  line-height: inherit;
+  color: #f0b322;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: #f0920e;
+  }
+`;
+
+const SignInBtn = styled.button`
+  cursor: pointer;
+  background: none;
+  line-height: inherit;
+  &:focus {
+    outline: none;
+  }
+  padding: 1rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  color: #1f2937;
+  background-color: #f0b322;
+  border-radius: 6px;
+  border: none;
+  &:hover {
+    color: #f0920e;
+  }
+`;
 
 export default function AuthInputs() {
-  const [enteredEmail, setEnteredEmail] = useState('');
-  const [enteredPassword, setEnteredPassword] = useState('');
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   function handleInputChange(identifier, value) {
-    if (identifier === 'email') {
+    if (identifier === "email") {
       setEnteredEmail(value);
     } else {
       setEnteredPassword(value);
@@ -17,37 +99,35 @@ export default function AuthInputs() {
     setSubmitted(true);
   }
 
-  const emailNotValid = submitted && !enteredEmail.includes('@');
+  const emailNotValid = submitted && !enteredEmail.includes("@");
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
   return (
-    <div id="auth-inputs">
-      <div className="controls">
+    <InputsContainer>
+      <div class="inputs">
         <p>
-          <label>Email</label>
-          <input
+          <Label $invalid={emailNotValid}>Email</Label>
+          <Input
             type="email"
-            className={emailNotValid ? 'invalid' : undefined}
-            onChange={(event) => handleInputChange('email', event.target.value)}
+            $invalid={emailNotValid}
+            onChange={(event) => handleInputChange("email", event.target.value)}
           />
         </p>
         <p>
-          <label>Password</label>
-          <input
+          <Label $invalid={passwordNotValid}>Password</Label>
+          <Input
             type="password"
-            className={passwordNotValid ? 'invalid' : undefined}
+            $invalid={passwordNotValid}
             onChange={(event) =>
-              handleInputChange('password', event.target.value)
+              handleInputChange("password", event.target.value)
             }
           />
         </p>
       </div>
-      <div className="actions">
-        <button type="button" className="text-button">
-          Create a new account
-        </button>
-        <button className='button' onClick={handleLogin}>Sign In</button>
+      <div class="actions">
+        <NewAccountBtn type="button">Create a new account</NewAccountBtn>
+        <SignInBtn onClick={handleLogin}>Sign In</SignInBtn>
       </div>
-    </div>
+    </InputsContainer>
   );
 }
