@@ -14,6 +14,7 @@ In this project, I apply different approaches to styling React applications. I d
 4. dynamic-styling-with-classes: represents the approach that repeats the approach presented in the branch "vanilla-css" but with additional logic of setting styles dynamically through dynamic usage of classes for the label element. The idea of this branch is to emphasize the usage of classes for setting styles dynamically.
 5. css-modules: represents the approach of styling a React application with CSS modules.
 6. styled-components: represents the approach of styling a React application with the help of the package Styled Components, including setting up styles dynamically through the props.
+7. styled-components-modules: represents the same approach as the branch "styled-components" but the components that are normally re-used in different parts of an application are placed in their separate modules. The current app does not re-use these components, so this module approach is only for demo purposes to simulate the most possible situation for a real app.
 
 ## Concepts Learned During This Project
 
@@ -26,3 +27,5 @@ In this project, I apply different approaches to styling React applications. I d
 - CSS modules, scoping CSS rules
 - Styling with Styled Components package
 - Setting styles dynamically through component props with the Styled Components approach
+- Reasons to locate a styled component in the file where it is used
+- Reasons to locate a styled component in a separate file
