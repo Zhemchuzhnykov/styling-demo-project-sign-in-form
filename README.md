@@ -27,9 +27,9 @@ In this project, I apply different approaches to styling React applications. I d
 - Setting up styles dynamically with inline styles
 - CSS modules, scoping CSS rules
 - Installing the package Styled Components
-- Styling with Styled Components package
+- Styling with Styled Components package, including pseudo selectors and media points
 - Setting styles dynamically through component props with the Styled Components approach
 - Reasons to locate a styled component in the file where it is used
 - Reasons to locate a styled component in a separate file
 - Installing the framework Tailwind CSS
-- Styling with Tailwind CSS
+- Styling with Tailwind CSS, including pseudo selectors and media points
