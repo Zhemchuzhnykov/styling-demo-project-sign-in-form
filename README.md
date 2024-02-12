@@ -15,6 +15,7 @@ In this project, I apply different approaches to styling React applications. I d
 5. css-modules: represents the approach of styling a React application with CSS modules.
 6. styled-components: represents the approach of styling a React application with the help of the package Styled Components, including setting up styles dynamically through the props.
 7. styled-components-modules: represents the same approach as the branch "styled-components" but the components that are normally re-used in different parts of an application are placed in their separate modules. The current app does not re-use these components, so this module approach is only for demo purposes to simulate the most possible situation for a real app.
+8. tailwind-css: represents the approach of styling a React application with the framework Tailwind CSS.
 
 ## Concepts Learned During This Project
 
@@ -25,7 +26,10 @@ In this project, I apply different approaches to styling React applications. I d
 - Styling a React app with inline styles
 - Setting up styles dynamically with inline styles
 - CSS modules, scoping CSS rules
+- Installing the package Styled Components
 - Styling with Styled Components package
 - Setting styles dynamically through component props with the Styled Components approach
 - Reasons to locate a styled component in the file where it is used
 - Reasons to locate a styled component in a separate file
+- Installing the framework Tailwind CSS
+- Styling with Tailwind CSS
